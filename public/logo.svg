@@ -1,0 +1,12 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 48" width="220" height="48">
+	<title>Novo Projeto</title>
+	<style>
+		tspan { white-space:pre } 
+		.t0 { font-size: 24px;fill: #ffffff;font-weight: 700;font-family: "FiraCode-Bold", "Fira Code" } 
+		.t1 { font-size: 24px;fill: #f13024;font-weight: 700;font-family: "FiraCode-Bold", "Fira Code" } 
+	</style>
+	<text id="rodrigo.fonseca" style="transform: matrix(1,0,0,1,2,31)" >
+		<tspan x="0" y="0" class="t0">r</tspan><tspan  y="0" class="t0">o</tspan><tspan  y="0" class="t0">d</tspan><tspan  y="0" class="t0">r</tspan><tspan  y="0" class="t0">i</tspan><tspan  y="0" class="t0">g</tspan><tspan  y="0" class="t0">o</tspan><tspan  y="0" class="t1">.</tspan><tspan  y="0" class="t1">f</tspan><tspan  y="0" class="t1">o</tspan><tspan  y="0" class="t1">n</tspan><tspan  y="0" class="t1">s</tspan><tspan  y="0" class="t1">e</tspan><tspan  y="0" class="t1">c</tspan><tspan  y="0" class="t1">a
+</tspan>
+	</text>
+</svg>
