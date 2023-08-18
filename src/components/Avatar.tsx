@@ -2,9 +2,13 @@ import React from 'react'
 
 const Avatar = () => {
   return (
-      <div className='hidden xl:flex xl:max-w-none'>
-          <img src="/avatar.png" width={737} height={678}
-          className='translate-z-0 w-full h-full'/>
+    <div className="xl:flex xl:max-w-none absolute top-0 left-0">
+      <img
+        src="/avatar.png"
+        width={623}
+        height={589}
+        className="translate-z-0 w-full h-full side-image"
+      />
     </div>
   )
 }

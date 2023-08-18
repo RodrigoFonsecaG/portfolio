@@ -28,8 +28,14 @@ export default {
       circleStar: 'url("/circle-star.svg")',
       site: 'url("/site-bg.svg")',
     },
+    keyframes: {
+      animate: {
+        '0%, 100%': { transform: 'translateY(20px)' },
+      },
+    },
     animation: {
       'spin-slow': 'spin 6s linear infinite',
+      'animateBounce': 'animate 2s infinite ease alternate',
     },
   },
   plugins: [],

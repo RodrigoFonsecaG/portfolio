@@ -24,6 +24,16 @@ textarea {
   font-family: 'Sora', sans-serif;
 }
 
+  @keyframes animate{
+    100%{
+      transform: translateY(20px);
+    }
+  }
+
+.side-image{
+  animation: animate 2s infinite ease alternate;
+}
+
 @layer base {
   .page {
     @apply w-full h-screen overflow-hidden;

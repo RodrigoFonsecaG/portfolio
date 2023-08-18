@@ -1,9 +1,11 @@
 import { motion } from 'framer-motion'
-import React from 'react'
+import React, {Suspense} from 'react'
 
 import { fadeIn } from '../animations/variant'
 import ParticlesContainer from '../components/ParticlesContainer'
 import Avatar from '../components/Avatar'
+import { Canvas } from '@react-three/fiber'
+import { OrbitControls, Sphere, MeshDistortMaterial } from '@react-three/drei'
 
 const Home = () => {
   return (
@@ -44,9 +46,24 @@ const Home = () => {
           initial="hidden"
           animate="show"
           exit="hidden"
-          transition={{duration: 1, ease: 'easeInOut'}}
+          transition={{ duration: 1, ease: 'easeInOut' }}
           className="w-full h-full max-w-[737px] max-h-[678px] absolute -bottom-32 lg:bottom-0 lg:right-[10%] lg:top-[15%]"
         >
+          <Canvas>
+            <Suspense fallback={null}>
+              <OrbitControls enableZoom={false} />
+              <ambientLight intensity={1} />
+              <directionalLight position={[3, 2, 1]} />
+              <Sphere args={[1, 100, 200]} scale={2.4}>
+                <MeshDistortMaterial
+                  color="#57BFDE"
+                  attach="material"
+                  distort={0.5}
+                  speed={2}
+                />
+              </Sphere>
+            </Suspense>
+          </Canvas>
           <Avatar />
         </motion.div>
       </div>
