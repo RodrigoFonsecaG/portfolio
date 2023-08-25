@@ -1,13 +1,20 @@
 import { motion } from 'framer-motion'
-import React, {Suspense} from 'react'
+import { Suspense, useState } from 'react'
 
 import { fadeIn } from '../animations/variant'
 import ParticlesContainer from '../components/ParticlesContainer'
 import Avatar from '../components/Avatar'
 import { Canvas } from '@react-three/fiber'
 import { OrbitControls, Sphere, MeshDistortMaterial } from '@react-three/drei'
+import { TypeAnimation } from 'react-type-animation'
+import { FaReact, FaNode, FaLaravel } from 'react-icons/fa'
+import { BiLogoTypescript, BiLogoJavascript, BiLogoNodejs } from 'react-icons/bi'
+
 
 const Home = () => {
+  const [textColor, setTextColor] = useState('white')
+  const [icon, setIcon] = useState(<BiLogoJavascript size={70} />)
+
   return (
     <div className="bg-primary/60 h-full">
       <div className="w-full h-full bg-gradient-to-r from-primary/10 via-black/30 to-black/10">
@@ -17,10 +24,51 @@ const Home = () => {
             initial="hidden"
             animate="show"
             exit="hidden"
-            className="h1"
+            className="h1 -mb-1"
           >
             Lorem ipsum dolor <br />{' '}
-            <span className="text-accent">sit amet consectetur</span>
+            <div
+              className="flex gap-2 align-center"
+              style={{
+                color: textColor,
+              }}
+            >
+              <TypeAnimation
+                className="h1"
+                sequence={[
+                  '',
+                  () => setTextColor('#F0D53C'),
+                  () => setIcon(<BiLogoJavascript size={70} />),
+                  'JavaScript',
+                  1000,
+                  '',
+                  () => setTextColor('#5ED3F3'),
+                  () => setIcon(<FaReact size={70} />),
+                  'React',
+                  1000,
+                  '',
+                  () => setTextColor('#4AA559'),
+                  () => setIcon(<BiLogoNodejs size={70} />),
+                  'NodeJS',
+                  1000,
+                  '',
+                  () => setTextColor('#F72B1E'),
+                  () => setIcon(<FaLaravel size={70} />),
+                  'Laravel',
+                  <FaLaravel />,
+                  1000,
+                  '',
+                  () => setTextColor('#2F74C0'),
+                  () => setIcon(<BiLogoTypescript size={70} />),
+                  'TypeScript',
+                  1000,
+                  '',
+                ]}
+                repeat={Infinity}
+              />
+
+              {icon}
+            </div>
           </motion.h1>
 
           <motion.p
@@ -28,7 +76,7 @@ const Home = () => {
             initial="hidden"
             animate="show"
             exit="hidden"
-            className="max-w-sm xl:max-w-xl mx-auto xl:mx-0 mb-10 xl:mb-16"
+            className="max-w-sm xl:max-w-xl mx-auto xl:mx-0 mb-10 xl:mb-16 mt-10"
           >
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque
             provident culpa in expedita dicta, modi magnam eaque harum earum.
@@ -36,6 +84,7 @@ const Home = () => {
           </motion.p>
         </div>
       </div>
+
       <div className="w-[1200px] h-full absolute right-0 bottom-0">
         <div className="bg-none xl:bg-explosion xl:bg-cover xl:bg-right xl:bg-no-repeat w-full h-full absolute mix-blend-color-dodge translate-z-0"></div>
 
