@@ -28,38 +28,38 @@ const Home = () => {
           >
             Lorem ipsum dolor <br />{' '}
             <div
-              className="flex gap-2 align-center"
+              className="flex gap-2 items-center xl:justify-start justify-center"
               style={{
                 color: textColor,
               }}
             >
               <TypeAnimation
-                className="h1"
+                className="h1 mb-0"
                 sequence={[
                   '',
                   () => setTextColor('#F0D53C'),
-                  () => setIcon(<BiLogoJavascript size={70} />),
+                  () => setIcon(<BiLogoJavascript size={70} className="xl:w-24 w-12" />),
                   'JavaScript',
                   1000,
                   '',
                   () => setTextColor('#5ED3F3'),
-                  () => setIcon(<FaReact size={70} />),
+                  () => setIcon(<FaReact size={70} className="xl:w-24 w-12" />),
                   'React',
                   1000,
                   '',
                   () => setTextColor('#4AA559'),
-                  () => setIcon(<BiLogoNodejs size={70} />),
+                  () => setIcon(<BiLogoNodejs size={70} className="xl:w-24 w-12" />),
                   'NodeJS',
                   1000,
                   '',
                   () => setTextColor('#F72B1E'),
-                  () => setIcon(<FaLaravel size={70} />),
+                  () => setIcon(<FaLaravel size={70} className="xl:w-24 w-12" />),
                   'Laravel',
                   <FaLaravel />,
                   1000,
                   '',
                   () => setTextColor('#2F74C0'),
-                  () => setIcon(<BiLogoTypescript size={70} />),
+                  () => setIcon(<BiLogoTypescript size={70} className="xl:w-24 w-12" />),
                   'TypeScript',
                   1000,
                   '',
@@ -76,7 +76,7 @@ const Home = () => {
             initial="hidden"
             animate="show"
             exit="hidden"
-            className="max-w-sm xl:max-w-xl mx-auto xl:mx-0 mb-10 xl:mb-16 mt-10"
+            className="max-w-sm xl:max-w-xl mx-auto xl:mx-0 mt-10"
           >
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque
             provident culpa in expedita dicta, modi magnam eaque harum earum.
@@ -96,7 +96,7 @@ const Home = () => {
           animate="show"
           exit="hidden"
           transition={{ duration: 1, ease: 'easeInOut' }}
-          className="w-full h-full max-w-[737px] max-h-[678px] absolute -bottom-32 lg:bottom-0 lg:right-[10%] lg:top-[15%]"
+          className="w-full h-full max-w-[737px] max-h-[678px] absolute right-5 -bottom-80 xl:bottom-0 xl:right-[10%] xl:top-[15%]"
         >
           <Canvas>
             <Suspense fallback={null}>
